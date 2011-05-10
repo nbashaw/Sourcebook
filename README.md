@@ -1,0 +1,2 @@
+# Sourcebook #
+So, I'm sitting around writing a research paper when I realize I need to do a better job saving my sources. I'm incredibly lazy, and don't want to keep a stupid excel database with everything, so I decided to just write a little sinatra app to do this for me.
