@@ -1,0 +1,29 @@
+%h1 Sourcebook
+%h2 An App To Help Nathan Keep Track of His MC 401 Paper's Sources
+%a{:id => "add_source"}
+  Add Source +
+#add_source_form{:style => "display: none;"}
+  %form
+    %label{:for => "title"}
+      Title
+    %input{:type => "text", :name => "title"}
+    %label{:for => "author"}
+      Author
+    %input{:type => "text", :name => "author"}
+    %label{:for => "url"}
+      URL
+    %input{:type => "text", :name => "url"}
+    %label{:for => "notes"}
+      Notes (optional)
+    %textarea{:rows => "20", :cols => "40"}
+%br
+#source_list
+  // for loop to make it iterate over all the sources in my database
+  
+
+:javascript
+  $(function(){
+    $(a#add_source).click(function(){
+      $(#add_source_form).slideDown('slow');
+    });
+  });

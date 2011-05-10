@@ -1,0 +1,39 @@
+GEM
+  remote: http://rubygems.org/
+  specs:
+    addressable (2.2.4)
+    data_objects (0.10.3)
+      addressable (~> 2.1)
+    dm-core (1.1.0)
+      addressable (~> 2.2.4)
+    dm-do-adapter (1.1.0)
+      data_objects (~> 0.10.2)
+      dm-core (~> 1.1.0)
+    dm-migrations (1.1.0)
+      dm-core (~> 1.1.0)
+    dm-sqlite-adapter (1.1.0)
+      dm-do-adapter (~> 1.1.0)
+      do_sqlite3 (~> 0.10.2)
+    dm-validations (1.1.0)
+      dm-core (~> 1.1.0)
+    do_sqlite3 (0.10.3)
+      data_objects (= 0.10.3)
+    haml (3.1.1)
+    rack (1.2.2)
+    sass (3.1.1)
+    sinatra (1.2.6)
+      rack (~> 1.1)
+      tilt (>= 1.2.2, < 2.0)
+    tilt (1.2.2)
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  dm-core
+  dm-migrations
+  dm-sqlite-adapter
+  dm-validations
+  haml
+  sass
+  sinatra
