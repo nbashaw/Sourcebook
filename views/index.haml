@@ -1,7 +1,7 @@
 #left_col
   %h1 Sourcebook
   #add_source_form
-    %form{:method => 'POST', :action => '/new'}
+    %form{method: 'POST', action: '/new', id: "source_form"}
       %label{:for => 'author'}
         Author
       %input{:type => 'text', :name => 'author'}
@@ -19,7 +19,9 @@
       %br
       %textarea{:name => 'note'}
       %br
-      %input{:type => 'submit', :value => 'Save Source'}
+      %a{id: "save_source", class: 'ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only', role: 'button'}
+        %span{class: 'ui-button-text'}
+          Save Source
       or
       %input{:type => 'reset'}
 #right_col
