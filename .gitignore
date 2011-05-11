@@ -1,2 +1,4 @@
-# ignore all database files
-*.db
+*.DS_Store
+*.sqlite3
+*.sass-cache/*
+.bundle/*

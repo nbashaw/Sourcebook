@@ -1,39 +1,36 @@
 #left_col
   %h1 Sourcebook
   #add_source_form
-    %form{:method => "POST", :action => "/new"}
-      %label{:for => "author"}
+    %form{:method => 'POST', :action => '/new'}
+      %label{:for => 'author'}
         Author
-      %input{:type => "text", :name => "author"}
+      %input{:type => 'text', :name => 'author'}
       %br
-      %label{:for => "title"}
+      %label{:for => 'title'}
         Title
-      %input{:type => "text", :name => "title"}
+      %input{:type => 'text', :name => 'title'}
       %br
-      %label{:for => "url"}
+      %label{:for => 'url'}
         URL
-      %input{:type => "text", :name => "url"}
+      %input{:type => 'text', :name => 'url'}
       %br
-      %label{:for => "note"}
+      %label{:for => 'note'}
         Note (optional)
       %br
-      %textarea{:name => "note"}
+      %textarea{:name => 'note'}
       %br
-      %input{:type => "submit", :value => "Save Source"}
+      %input{:type => 'submit', :value => 'Save Source'}
       or
-      %input{:type => "reset"}
+      %input{:type => 'reset'}
 #right_col
   #source_list
     %h2 Your Sources
     %hr
     - @sources.each do|s|
       .source
-        %a{:href => "#{s.url}", :class => "title"}
+        %a{:href => "#{s.url}", :class => 'title'}
           #{s.title}
-        %p{:class => "description"}
-          = s.note
-          (
-          %a{class: "delete_source", href: "/#{s.id}/delete" }
+        %p{:class => 'description'}
+          = s.note            
+          %a{class: 'delete_source', href: "/#{s.id}/delete" }
             delete
-          )
-          
